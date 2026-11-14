@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import type { RenderedPage } from "../src/entry-server.ts";
@@ -8,11 +8,8 @@ import type { SiteConfig, SiteEnv } from "../src/site/schema.ts";
  * Writes the static site into `outDir` from the client build's index.html
  * (which carries the hashed script/CSS tags) and the server renderer:
  *
- *   index.html  — prerendered markup + <head> in the base language, hydrated by
- *                 the client bundle (which shows the language last picked in the menu)
+ *   index.html  — prerendered markup + <head>, hydrated by the client bundle
  *   error.html  — prerendered, no scripts (what S3 serves for missing paths)
- *   <path>/index.html — each document's page (`termsofuse/index.html`), from
- *                 the client build's document.html, which is then removed
  *   robots.txt  — test: disallow everything; prod: allow + sitemap
  *   sitemap.xml — every indexable page (needs the environment's siteUrl)
  */
@@ -40,22 +37,14 @@ export async function prerender(options: {
     );
   }
 
-  const templates = new Map<string, string>();
-  const templateOf = (page: RenderedPage) => {
-    const name = page.template ?? "index.html";
-    if (!templates.has(name)) templates.set(name, readFileSync(join(outDir, name), "utf8"));
-    return templates.get(name)!;
-  };
+  const template = readFileSync(join(outDir, "index.html"), "utf8");
   const pages = await entry.renderPages();
   for (const page of pages) {
-    const template = templateOf(page);
     const file = join(outDir, page.file);
     mkdirSync(dirname(file), { recursive: true });
     writeFileSync(file, fillTemplate(template, page));
     console.log(`prerendered ${page.file}`);
   }
-  // A template, not a page: its pages are each document's <path>/index.html.
-  rmSync(join(outDir, "document.html"), { force: true });
 
   writeFileSync(join(outDir, "robots.txt"), robotsTxt(env, siteUrl));
   console.log("wrote robots.txt");

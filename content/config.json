@@ -1,0 +1,9 @@
+{
+  "name": "Site",
+  "lang": "en",
+  "environments": {
+    "test": {},
+    "prod": {}
+  },
+  "seo": {}
+}

@@ -24,7 +24,7 @@ export function buildHead(options: HeadOptions): string {
   const seo = config.seo;
   const siteUrl = config.environments[env].siteUrl;
   const title = options.title ?? seo.title ?? config.name;
-  const description = seo.description || stripHtml(config.hero.titleHtml);
+  const description = seo.description;
   const absolute = (p: string) => (siteUrl && p ? new URL(p, siteUrl).href : "");
   const pageUrl = absolute(path);
   const imagePath = seo.image ? asset(seo.image) : "";
@@ -33,7 +33,7 @@ export function buildHead(options: HeadOptions): string {
   const tags: string[] = [
     `<title>${escapeHtml(title)}</title>`,
     meta("name", "description", description),
-    `<meta http-equiv="Content-Security-Policy" content="${escapeHtml(contentSecurityPolicy(config, env))}" />`,
+    `<meta http-equiv="Content-Security-Policy" content="${escapeHtml(contentSecurityPolicy())}" />`,
     `<meta name="referrer" content="strict-origin-when-cross-origin" />`,
   ];
   // Test builds are never indexed (robots.txt says the same); neither is the error page.
@@ -67,19 +67,15 @@ export function buildHead(options: HeadOptions): string {
 }
 
 /**
- * Only this site, the Universal Form bundle (and its lazy chunks, same origin)
- * and the Probability API. Styles allow inline: v1's Lit fields set style
- * attributes. Delivered as <meta> (S3 can't send headers), so `frame-ancestors`
- * has to come from CloudFront if Netflix enables a response-headers policy.
+ * Only this site. Delivered as <meta> (S3 can't send headers), so
+ * `frame-ancestors` has to come from CloudFront if Netflix enables a
+ * response-headers policy.
  */
-export function contentSecurityPolicy(config: SiteConfig, env: SiteEnv): string {
-  const v1 = config.form.universalV1;
-  const origin = (url: string | undefined) => (url ? new URL(url).origin : "");
-  const api = [...new Set([origin(config.environments[env].submitUrl), origin(v1.formFieldsUrl)])];
+export function contentSecurityPolicy(): string {
   return [
     "default-src 'self'",
-    `script-src 'self' ${origin(v1.scriptUrl)}`,
-    `connect-src 'self' ${api.filter(Boolean).join(" ")}`,
+    "script-src 'self'",
+    "connect-src 'self'",
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data:",
     "font-src 'self'",
@@ -100,11 +96,4 @@ export function escapeHtml(value: string): string {
     .replace(/"/g, "&quot;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
-}
-
-function stripHtml(html: string): string {
-  return html
-    .replace(/<[^>]*>/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
 }

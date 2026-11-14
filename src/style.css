@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Revealed by GSAP on load (src/site/motion.ts): hidden until then, so the
+   prerendered page doesn't show them first; at once when motion is reduced. */
+[data-motion] {
+  visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-motion] {
+    visibility: visible;
+  }
+}
+
+.invisible-scrollbars {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.invisible-scrollbars::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes moveUpDown {
+  0% {
+    bottom: 2%;
+  }
+  100% {
+    bottom: 7%;
+  }
+}
+
+.bounce {
+  animation: moveUpDown 0.7s ease-in-out infinite alternate;
+}
+
+.font-b {
+  font-weight: bold;
+}
+.font-i {
+  font-style: italic;
+}
+.font-u {
+  text-decoration: underline;
+}
