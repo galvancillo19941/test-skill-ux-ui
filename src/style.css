@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+/* Self-hosted fonts (latin subset, bundled from @fontsource): no requests to third parties. */
+@import "@fontsource/bebas-neue/latin-400.css";
+@import "@fontsource/poppins/latin-400.css";
+@import "@fontsource/poppins/latin-500.css";
+@import "@fontsource/poppins/latin-600.css";
+@import "@fontsource/poppins/latin-700.css";
+
+:root {
+  /* ── Editorial natural-history palette (shared base, matches the homepage) ── */
+  --paper: #f3ead9; /* warm cream */
+  --paper-light: #faf4e8;
+  --ink: #1b1a17; /* near-black ink */
+  --ink-muted: rgba(27, 26, 23, 0.6);
+  --accent: #b5532f; /* terracotta drawn from the plates */
+
+  --bg-initial: var(--paper); /* left content column background */
+  --gallery-accent: var(--ink); /* right gallery panel behind slides */
+
+  /* OneID / form theme */
+  --oneid-label-color: var(--ink);
+  --oneid-label-size: 10px;
+  --oneid-label-size-large: 12px;
+  --oneid-label-font-weight: 400;
+  --oneid-label-text-transform: uppercase;
+  --oneid-label-text-font-family: inherit;
+
+  --oneid-input-color: var(--ink);
+  --oneid-input-size: 14px;
+  --oneid-input-size-large: 16px;
+  --oneid-input-font-weight: 300;
+  --oneid-input-border: 1px solid rgba(27, 26, 23, 0.18);
+  --oneid-input-background: #fffdf8;
+  --oneid-input-text-font-family: inherit;
+
+  --oneid-check-color: var(--ink);
+  --oneid-check-size: 14px;
+  --oneid-check-size-large: 14px;
+  --oneid-check-font-weight: 400;
+  --oneid-check-text-transform: initial;
+  --oneid-check-line-height: 20px;
+  --oneid-check-line-height-large: 25px;
+  --oneid-check-text-font-family: inherit;
+
+  --oneid-button-background: var(--ink);
+  --oneid-button-color: var(--paper-light);
+  --oneid-button-color-hover: var(--ink);
+  --oneid-button-size: 14px;
+  --oneid-button-size-large: 16px;
+  --oneid-button-font-weight: 700;
+  --oneid-button-letter-spacing: 1.4px;
+  --oneid-button-text-transform: uppercase;
+  --oneid-button-text-font-family: inherit;
+
+  --oneid-text-error-color: #ff4848;
+  --oneid-text-error-size: 12px;
+  --oneid-text-error-size-large: 12px;
+  --oneid-text-error-font-weight: 400;
+  --oneid-text-error-text-transform: initial;
+  --oneid-text-error-line-height: 20px;
+  --oneid-text-error-line-height-large: 20px;
+  --oneid-text-error-text-font-family: inherit;
+
+  --oneid-text-end-start-event-size: 40px;
+  --oneid-text-end-start-event-size-large: 50px;
+  --oneid-text-end-start-event-color: var(--ink);
+  --oneid-text-end-start-event-font-weight: 900;
+  --oneid-text-end-start-event-text-transform: initial;
+  --oneid-text-end-start-event-line-height: 50px;
+  --oneid-text-end-start-event-line-height-large: 60px;
+  --oneid-text-end-start-event-text-font-family: inherit;
+
+  --oneid-text-error-submit-size: 25px;
+  --oneid-text-error-submit-size-large: 40px;
+  --oneid-text-error-submit-color: var(--ink);
+  --oneid-text-error-submit-font-weight: 900;
+  --oneid-text-error-submit-text-transform: initial;
+  --oneid-text-error-submit-line-height: 40px;
+  --oneid-text-error-submit-line-height-large: 50px;
+  --oneid-text-error-submit-text-font-family: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Vue mount point — must be full viewport so child layouts can use height: 100% */
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+/* Revealed by GSAP on load (src/site/motion.ts): hidden until then, so the
+   prerendered page doesn't show them first; at once when motion is reduced. */
+[data-motion] {
+  visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-motion] {
+    visibility: visible;
+  }
+}
+
+.invisible-scrollbars {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.invisible-scrollbars::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes moveUpDown {
+  0% {
+    bottom: 2%;
+  }
+  100% {
+    bottom: 7%;
+  }
+}
+
+.bounce {
+  animation: moveUpDown 0.7s ease-in-out infinite alternate;
+}
+
+.font-b {
+  font-weight: bold;
+}
+.font-i {
+  font-style: italic;
+}
+.font-u {
+  text-decoration: underline;
+}

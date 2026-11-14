@@ -1,0 +1,1149 @@
+{
+  "name": "Stranger Things Day Developer Contest",
+  "lang": "en",
+  "languageMenu": {
+    "name": "English",
+    "label": "Language"
+  },
+  "environments": {
+    "test": {
+      "submitUrl": "https://api.helloprobability.io/submission/test/6ac016a105927c4e9b5bc570"
+    },
+    "prod": {
+      "siteUrl": "https://strangerthingsrobloxcontest.com",
+      "submitUrl": "https://api.helloprobability.io/submission/prod/6ac016a105927c4e9b5bc570"
+    }
+  },
+  "seo": {
+    "title": "Stranger Things Day Developer Contest",
+    "description": "Build your own Stranger Things games and items for a chance to win Roblox Ad Credit and exclusive digital prizes!",
+    "image": "img/share.jpg",
+    "imageAlt": "Netflix Stranger Things",
+    "imageWidth": 1086,
+    "imageHeight": 623,
+    "favicon": "img/favicon.png",
+    "twitterCard": "summary_large_image",
+    "twitterSite": "@netflix"
+  },
+  "header": {
+    "logo": "img/lockup.svg",
+    "alt": "Netflix Stranger Things"
+  },
+  "hero": {
+    "eyebrow": "CREATOR CONTEST",
+    "titleHtml": "Build your own Stranger Things games and items for a chance to win Roblox Ad Credit and exclusive digital prizes!",
+    "paragraphsHtml": ["Tell us who you are, what you’re building and where to find it."]
+  },
+  "thankYou": {
+    "titleHtml": "THANKS FOR ENTERING",
+    "paragraphsHtml": [
+      "Your entry is in. We’ll review every submission after the contest closes on January 8, 2027, so keep an eye on your inbox."
+    ]
+  },
+  "form": {
+    "universalV1": {
+      "scriptUrl": "https://universal-form.onprobability.com/v1/releases/1.0.0/index.js",
+      "scriptIntegrity": "sha384-0YCSGRZwykeHWTHhiDk6lRIKQvsNVDF7BtqlwvDIPT38F3H9w92RpAtVI/Z9UH/z",
+      "formFieldsUrl": "https://api.helloprobability.io/service/get-form-fields/6ac016a105927c4e9b5bc570",
+      "sections": [
+        {
+          "id": "category",
+          "titleHtml": "<div class=\"st-head\"><h2 class=\"st-title\"><span class=\"st-title__num\">01</span> Entry Category</h2><div class=\"st-category\"></div></div>",
+          "fields": ["entry_category"]
+        },
+        {
+          "id": "about-you",
+          "titleHtml": "<div class=\"st-head\"><h2 class=\"st-title\"><span class=\"st-title__num\">02</span> About You</h2></div>",
+          "fields": ["first_name", "last_name", "email", "country", "city", "state"],
+          "columns": 2
+        },
+        {
+          "id": "about-content",
+          "titleHtml": "<div class=\"st-head\"><h2 class=\"st-title\"><span class=\"st-title__num\">03</span> About Your Content</h2></div>",
+          "fields": ["license_request_type", "creator_id", "experience_id_url"],
+          "columns": 2
+        },
+        {
+          "id": "consent",
+          "fields": ["p_i_confirm_i_am_a_legal_resident_of_eit"]
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "name": "entry_category",
+            "type": "select",
+            "label": "ENTRY CATEGORY",
+            "placeholder": "Select your entry category",
+            "required": true,
+            "errorMessage": "Please choose an entry category",
+            "options": [
+              {
+                "label": "Full Game",
+                "value": "full_game"
+              },
+              {
+                "label": "Game Integration",
+                "value": "game_integration"
+              },
+              {
+                "label": "UGC Item",
+                "value": "new_item"
+              }
+            ]
+          },
+          {
+            "name": "first_name",
+            "type": "text",
+            "label": "FIRST NAME",
+            "placeholder": "e.g. Jim",
+            "required": true,
+            "errorMessage": "Please enter your First Name"
+          },
+          {
+            "name": "last_name",
+            "type": "text",
+            "label": "LAST NAME",
+            "placeholder": "e.g. Hopper",
+            "required": true,
+            "errorMessage": "Please enter your Last Name"
+          },
+          {
+            "name": "email",
+            "type": "email",
+            "label": "EMAIL ADDRESS",
+            "placeholder": "e.g. jim.hopper@mail.com",
+            "required": true,
+            "errorMessage": "Please enter a valid Email Address"
+          },
+          {
+            "name": "country",
+            "type": "select",
+            "label": "COUNTRY",
+            "placeholder": "Select",
+            "required": true,
+            "errorMessage": "Please select a Country",
+            "options": [
+              {
+                "label": "U.S.",
+                "value": "u.s."
+              },
+              {
+                "label": "Canada",
+                "value": "canada"
+              },
+              {
+                "label": "Mexico",
+                "value": "mexico"
+              }
+            ]
+          },
+          {
+            "name": "city",
+            "type": "text",
+            "label": "CITY",
+            "placeholder": "e.g. Hawkins",
+            "required": true,
+            "errorMessage": "Please enter your City"
+          },
+          {
+            "name": "state",
+            "type": "select",
+            "label": "STATE/PROVINCE/TERRITORY",
+            "placeholder": "Select",
+            "required": true,
+            "errorMessage": "Please select a State",
+            "options": [
+              {
+                "label": "Alabama",
+                "value": "alabama"
+              },
+              {
+                "label": "Alaska",
+                "value": "alaska"
+              },
+              {
+                "label": "Arizona",
+                "value": "arizona"
+              },
+              {
+                "label": "Arkansas",
+                "value": "arkansas"
+              },
+              {
+                "label": "California",
+                "value": "california"
+              },
+              {
+                "label": "Colorado",
+                "value": "colorado"
+              },
+              {
+                "label": "Connecticut",
+                "value": "connecticut"
+              },
+              {
+                "label": "Delaware",
+                "value": "delaware"
+              },
+              {
+                "label": "District Of Columbia",
+                "value": "district_of_columbia"
+              },
+              {
+                "label": "Florida",
+                "value": "florida"
+              },
+              {
+                "label": "Georgia",
+                "value": "georgia"
+              },
+              {
+                "label": "Hawaii",
+                "value": "hawaii"
+              },
+              {
+                "label": "Idaho",
+                "value": "idaho"
+              },
+              {
+                "label": "Illinois",
+                "value": "illinois"
+              },
+              {
+                "label": "Indiana",
+                "value": "indiana"
+              },
+              {
+                "label": "Iowa",
+                "value": "iowa"
+              },
+              {
+                "label": "Kansas",
+                "value": "kansas"
+              },
+              {
+                "label": "Kentucky",
+                "value": "kentucky"
+              },
+              {
+                "label": "Louisiana",
+                "value": "louisiana"
+              },
+              {
+                "label": "Maine",
+                "value": "maine"
+              },
+              {
+                "label": "Maryland",
+                "value": "maryland"
+              },
+              {
+                "label": "Massachusetts",
+                "value": "massachusetts"
+              },
+              {
+                "label": "Michigan",
+                "value": "michigan"
+              },
+              {
+                "label": "Minnesota",
+                "value": "minnesota"
+              },
+              {
+                "label": "Mississippi",
+                "value": "mississippi"
+              },
+              {
+                "label": "Missouri",
+                "value": "missouri"
+              },
+              {
+                "label": "Montana",
+                "value": "montana"
+              },
+              {
+                "label": "Nebraska",
+                "value": "nebraska"
+              },
+              {
+                "label": "Nevada",
+                "value": "nevada"
+              },
+              {
+                "label": "New Hampshire",
+                "value": "new_hampshire"
+              },
+              {
+                "label": "New Jersey",
+                "value": "new_jersey"
+              },
+              {
+                "label": "New Mexico",
+                "value": "new_mexico"
+              },
+              {
+                "label": "New York",
+                "value": "new_york"
+              },
+              {
+                "label": "North Carolina",
+                "value": "north_carolina"
+              },
+              {
+                "label": "North Dakota",
+                "value": "north_dakota"
+              },
+              {
+                "label": "Ohio",
+                "value": "ohio"
+              },
+              {
+                "label": "Oklahoma",
+                "value": "oklahoma"
+              },
+              {
+                "label": "Oregon",
+                "value": "oregon"
+              },
+              {
+                "label": "Pennsylvania",
+                "value": "pennsylvania"
+              },
+              {
+                "label": "Rhode Island",
+                "value": "rhode_island"
+              },
+              {
+                "label": "South Carolina",
+                "value": "south_carolina"
+              },
+              {
+                "label": "South Dakota",
+                "value": "south_dakota"
+              },
+              {
+                "label": "Tennessee",
+                "value": "tennessee"
+              },
+              {
+                "label": "Texas",
+                "value": "texas"
+              },
+              {
+                "label": "Utah",
+                "value": "utah"
+              },
+              {
+                "label": "Vermont",
+                "value": "vermont"
+              },
+              {
+                "label": "Virginia",
+                "value": "virginia"
+              },
+              {
+                "label": "Washington",
+                "value": "washington"
+              },
+              {
+                "label": "West Virginia",
+                "value": "west_virginia"
+              },
+              {
+                "label": "Wisconsin",
+                "value": "wisconsin"
+              },
+              {
+                "label": "Wyoming",
+                "value": "wyoming"
+              },
+              {
+                "label": "Aguascalientes",
+                "value": "aguascalientes"
+              },
+              {
+                "label": "Baja California",
+                "value": "baja_california"
+              },
+              {
+                "label": "Baja California Sur",
+                "value": "baja_california_sur"
+              },
+              {
+                "label": "Campeche",
+                "value": "campeche"
+              },
+              {
+                "label": "Chiapas",
+                "value": "chiapas"
+              },
+              {
+                "label": "Chihuahua",
+                "value": "chihuahua"
+              },
+              {
+                "label": "Coahuila",
+                "value": "coahuila"
+              },
+              {
+                "label": "Colima",
+                "value": "colima"
+              },
+              {
+                "label": "Durango",
+                "value": "durango"
+              },
+              {
+                "label": "Guanajuato",
+                "value": "guanajuato"
+              },
+              {
+                "label": "Guerrero",
+                "value": "guerrero"
+              },
+              {
+                "label": "Hidalgo",
+                "value": "hidalgo"
+              },
+              {
+                "label": "Jalisco",
+                "value": "jalisco"
+              },
+              {
+                "label": "México (State of México)",
+                "value": "state_of_mexico"
+              },
+              {
+                "label": "Michoacán",
+                "value": "michoacan"
+              },
+              {
+                "label": "Morelos",
+                "value": "morelos"
+              },
+              {
+                "label": "Nayarit",
+                "value": "nayarit"
+              },
+              {
+                "label": "Nuevo León",
+                "value": "nuevo_leon"
+              },
+              {
+                "label": "Oaxaca",
+                "value": "oaxaca"
+              },
+              {
+                "label": "Puebla",
+                "value": "puebla"
+              },
+              {
+                "label": "Querétaro",
+                "value": "queretaro"
+              },
+              {
+                "label": "Quintana Roo",
+                "value": "quintana_roo"
+              },
+              {
+                "label": "San Luis Potosí",
+                "value": "san_luis_potosi"
+              },
+              {
+                "label": "Sinaloa",
+                "value": "sinaloa"
+              },
+              {
+                "label": "Sonora",
+                "value": "sonora"
+              },
+              {
+                "label": "Tabasco",
+                "value": "tabasco"
+              },
+              {
+                "label": "Tamaulipas",
+                "value": "tamaulipas"
+              },
+              {
+                "label": "Tlaxcala",
+                "value": "tlaxcala"
+              },
+              {
+                "label": "Veracruz",
+                "value": "veracruz"
+              },
+              {
+                "label": "Yucatán",
+                "value": "yucatan"
+              },
+              {
+                "label": "Zacatecas",
+                "value": "zacatecas"
+              },
+              {
+                "label": "Mexico City",
+                "value": "mexico_city"
+              },
+              {
+                "label": "Alberta",
+                "value": "alberta"
+              },
+              {
+                "label": "British Columbia",
+                "value": "british_columbia"
+              },
+              {
+                "label": "Manitoba",
+                "value": "manitoba"
+              },
+              {
+                "label": "New Brunswick",
+                "value": "new_brunswick"
+              },
+              {
+                "label": "Newfoundland and Labrador",
+                "value": "newfoundland_and_labrador"
+              },
+              {
+                "label": "Nova Scotia",
+                "value": "nova_scotia"
+              },
+              {
+                "label": "Ontario",
+                "value": "ontario"
+              },
+              {
+                "label": "Prince Edward Island",
+                "value": "prince_edward_island"
+              },
+              {
+                "label": "Quebec",
+                "value": "quebec"
+              },
+              {
+                "label": "Saskatchewan",
+                "value": "saskatchewan"
+              },
+              {
+                "label": "Northwest Territories",
+                "value": "northwest_territories"
+              },
+              {
+                "label": "Nunavut",
+                "value": "nunavut"
+              },
+              {
+                "label": "Yukon",
+                "value": "yukon"
+              }
+            ],
+            "dependsOn": {
+              "field": "country",
+              "disabledWhenEmpty": true,
+              "optionsWhen": {
+                "u.s.": [
+                  "alabama",
+                  "alaska",
+                  "arizona",
+                  "arkansas",
+                  "california",
+                  "colorado",
+                  "connecticut",
+                  "delaware",
+                  "district_of_columbia",
+                  "florida",
+                  "georgia",
+                  "hawaii",
+                  "idaho",
+                  "illinois",
+                  "indiana",
+                  "iowa",
+                  "kansas",
+                  "kentucky",
+                  "louisiana",
+                  "maine",
+                  "maryland",
+                  "massachusetts",
+                  "michigan",
+                  "minnesota",
+                  "mississippi",
+                  "missouri",
+                  "montana",
+                  "nebraska",
+                  "nevada",
+                  "new_hampshire",
+                  "new_jersey",
+                  "new_mexico",
+                  "new_york",
+                  "north_carolina",
+                  "north_dakota",
+                  "ohio",
+                  "oklahoma",
+                  "oregon",
+                  "pennsylvania",
+                  "rhode_island",
+                  "south_carolina",
+                  "south_dakota",
+                  "tennessee",
+                  "texas",
+                  "utah",
+                  "vermont",
+                  "virginia",
+                  "washington",
+                  "west_virginia",
+                  "wisconsin",
+                  "wyoming"
+                ],
+                "canada": [
+                  "alberta",
+                  "british_columbia",
+                  "manitoba",
+                  "new_brunswick",
+                  "newfoundland_and_labrador",
+                  "nova_scotia",
+                  "ontario",
+                  "prince_edward_island",
+                  "quebec",
+                  "saskatchewan",
+                  "northwest_territories",
+                  "nunavut",
+                  "yukon"
+                ],
+                "mexico": [
+                  "aguascalientes",
+                  "baja_california",
+                  "baja_california_sur",
+                  "campeche",
+                  "chiapas",
+                  "chihuahua",
+                  "coahuila",
+                  "colima",
+                  "durango",
+                  "guanajuato",
+                  "guerrero",
+                  "hidalgo",
+                  "jalisco",
+                  "state_of_mexico",
+                  "michoacan",
+                  "morelos",
+                  "nayarit",
+                  "nuevo_leon",
+                  "oaxaca",
+                  "puebla",
+                  "queretaro",
+                  "quintana_roo",
+                  "san_luis_potosi",
+                  "sinaloa",
+                  "sonora",
+                  "tabasco",
+                  "tamaulipas",
+                  "tlaxcala",
+                  "veracruz",
+                  "yucatan",
+                  "zacatecas",
+                  "mexico_city"
+                ]
+              }
+            }
+          },
+          {
+            "name": "license_request_type",
+            "type": "select",
+            "label": "LICENSE REQUEST TYPE",
+            "placeholder": "Select",
+            "required": true,
+            "errorMessage": "Please select a License",
+            "noteHtml": "Be sure you have requested your Netflix Stranger Things license before submitting the entry form. License requests can be made\u00a0<a href=\"https://create.roblox.com/explore/licenses/6fdf2c6d-e7e9-40de-a94c-b40411675759\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.",
+            "options": [
+              {
+                "label": "UGC Item",
+                "value": "ugc"
+              },
+              {
+                "label": "Time-Limited",
+                "value": "time-limited"
+              },
+              {
+                "label": "Perpetual",
+                "value": "perpetual"
+              }
+            ],
+            "dependsOn": {
+              "field": "entry_category",
+              "disabledWhenEmpty": true,
+              "optionsWhen": {
+                "new_item": ["ugc"],
+                "game_integration": ["time-limited", "perpetual"],
+                "full_game": ["time-limited", "perpetual"]
+              }
+            }
+          },
+          {
+            "name": "creator_id",
+            "type": "text",
+            "label": "CREATOR ID",
+            "placeholder": "e.g. 123456789",
+            "required": true,
+            "errorMessage": "Please enter your Creator ID",
+            "validate": {
+              "pattern": "[0-9]{9}",
+              "message": "Creator ID must be 9 digits, numbers only",
+              "inputMode": "numeric",
+              "maxLength": 9
+            }
+          },
+          {
+            "name": "experience_id_url",
+            "type": "text",
+            "label": "EXPERIENCE URL",
+            "placeholder": "https://",
+            "required": true,
+            "errorMessage": "Please enter a valid Experience URL",
+            "validate": {
+              "pattern": "https?://(?!www\\.[a-z0-9-]+(?:[:/?#]|$))(?!(?:[0-9]+\\.){2,}[a-z]{2,63}(?:[:/?#]|$))(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z]{2,63}(?::[0-9]{1,5})?(?:[/?#]\\S*)?",
+              "message": "Please enter a valid URL, starting with https://",
+              "inputMode": "url"
+            },
+            "dependsOn": {
+              "field": "entry_category",
+              "textWhen": {
+                "new_item": {
+                  "label": "UGC ITEM URL",
+                  "errorMessage": "Please enter a valid UGC Item URL"
+                },
+                "game_integration": {
+                  "label": "GAME URL",
+                  "errorMessage": "Please enter a valid Game URL"
+                },
+                "full_game": {
+                  "label": "GAME URL",
+                  "errorMessage": "Please enter a valid Game URL"
+                }
+              }
+            }
+          },
+          {
+            "name": "p_i_confirm_i_am_a_legal_resident_of_eit",
+            "type": "checkbox",
+            "label": "I confirm I am a legal resident of either the 50 US/DC, Canada or Mexico and am at least 18 years of age (or age of majority in my jurisdiction of residence, whichever is older) and have read and agree to the Official Rules and Contest Global Terms of Use and Privacy Policy.",
+            "labelHtml": "I confirm I am a legal resident of either the 50 US/DC, Canada or Mexico and am at least 18 years of age (or age of majority in my jurisdiction of residence, whichever is older) and have read and agree to the <a href=\"/rules\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Official Rules</strong></a> and <a href=\"/termsofuse\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Contest Global Terms of Use and Privacy Policy</strong></a>.",
+            "required": true,
+            "errorMessage": "You must agree to continue"
+          }
+        ],
+        "submit": {
+          "label": "SUBMIT ENTRY"
+        },
+        "locale": "en",
+        "i18n": {
+          "en": {
+            "requiredLegend": ""
+          },
+          "es": {
+            "requiredLegend": "",
+            "email": {
+              "invalid": "Por favor introduce una dirección de Correo Electrónico válida"
+            },
+            "select": {
+              "search": "Buscar…",
+              "empty": "No se encontraron opciones",
+              "results": "{{count}} opciones"
+            }
+          },
+          "fr": {
+            "requiredLegend": "",
+            "email": {
+              "invalid": "Veuillez saisir une adresse courriel valide"
+            },
+            "select": {
+              "search": "Rechercher…",
+              "empty": "Aucune option trouvée",
+              "results": "{{count}} options"
+            }
+          }
+        }
+      },
+      "shownErrors": {
+        "Sorry, you reached the entry limit for this category.": "Sorry, you reached the entry limit for this category."
+      },
+      "messages": {
+        "sending": "SUBMITTING…",
+        "error": "Thank you for your patience, please try again to enter.",
+        "loading": "LOADING…",
+        "loadError": "The form couldn’t be loaded.",
+        "retry": "Try again"
+      }
+    }
+  },
+  "legal": {
+    "summaryHtml": "<strong>NO PURCHASE NECESSARY.</strong> Enter Contest between 12:01 a.m. PT on 11/6/26 and 11:59 p.m. PT on 1/8/27. Open to legal residents of the 50 U.S. &amp; D.C., Canada and Mexico who are at least 18 years of age (or age of majority in their jurisdiction of residence, whichever is older). See <a href=\"/rules\" target=\"_blank\" rel=\"noopener noreferrer\">Official Rules</a> for full details on eligibility requirements, how to enter, judging criteria, prize descriptions and limitations. Void where prohibited."
+  },
+  "errorPage": {
+    "title": "PAGE NOT FOUND",
+    "message": "This page slipped into the Upside Down.",
+    "linkLabel": "BACK TO THE CONTEST"
+  },
+  "documents": [
+    {
+      "path": "/rules",
+      "lang": "en",
+      "title": "Official Rules",
+      "file": "docs/rules.pdf"
+    },
+    {
+      "path": "/rules-es",
+      "lang": "es",
+      "title": "Reglas Oficiales",
+      "file": "docs/rules-es.pdf"
+    },
+    {
+      "path": "/rules-fr",
+      "lang": "fr",
+      "title": "Règlement officiel",
+      "file": "docs/rules-fr.pdf"
+    },
+    {
+      "path": "/termsofuse",
+      "lang": "en",
+      "title": "Terms of Use",
+      "file": "docs/terms-of-use.pdf"
+    },
+    {
+      "path": "/termsofuse-es",
+      "lang": "es",
+      "title": "Términos de Uso",
+      "file": "docs/terms-of-use-es.pdf"
+    },
+    {
+      "path": "/termsofuse-fr",
+      "lang": "fr",
+      "title": "Conditions d’utilisation",
+      "file": "docs/terms-of-use-fr.pdf"
+    }
+  ],
+  "i18n": {
+    "es": {
+      "languageMenu": {
+        "name": "Español",
+        "label": "Idioma"
+      },
+      "seo": {
+        "title": "Stranger Things Day Developer Contest",
+        "description": "Build your own Stranger Things games and items for a chance to win Roblox Ad Credit and exclusive digital prizes!",
+        "imageAlt": "Netflix Stranger Things"
+      },
+      "header": {
+        "alt": "Netflix Stranger Things"
+      },
+      "hero": {
+        "eyebrow": "CONCURSO PARA CREADORES",
+        "titleHtml": "Ábrete camino hacia el «Upside Down» y tendrás la oportunidad de ganar crédito publicitario para Roblox.",
+        "paragraphsHtml": [
+          "Cuéntanos quién eres, qué estás construyendo y dónde podemos encontrarlo."
+        ]
+      },
+      "thankYou": {
+        "titleHtml": "GRACIAS POR PARTICIPAR",
+        "paragraphsHtml": [
+          "Recibimos tu inscripción. Revisaremos todas las participaciones cuando cierre el concurso, el 8 de enero de 2027, así que mantente atento a tu correo."
+        ]
+      },
+      "form": {
+        "sections": {
+          "category": {
+            "titleHtml": "<div class=\"st-head\"><h2 class=\"st-title\"><span class=\"st-title__num\">01</span> Categoría de Inscripción</h2><div class=\"st-category\"></div></div>"
+          },
+          "about-you": {
+            "titleHtml": "<div class=\"st-head\"><h2 class=\"st-title\"><span class=\"st-title__num\">02</span> Sobre Ti</h2></div>"
+          },
+          "about-content": {
+            "titleHtml": "<div class=\"st-head\"><h2 class=\"st-title\"><span class=\"st-title__num\">03</span> Acerca de tu Contenido</h2></div>"
+          }
+        },
+        "fields": {
+          "entry_category": {
+            "label": "CATEGORÍA DE INSCRIPCIÓN",
+            "placeholder": "Selecciona tu categoría",
+            "errorMessage": "Por favor selecciona una Categoría de Inscripción",
+            "options": {
+              "new_item": "UGC Item",
+              "game_integration": "Integración de Juego",
+              "full_game": "Juego Completo"
+            }
+          },
+          "first_name": {
+            "label": "NOMBRE",
+            "placeholder": "p. ej. Jim",
+            "errorMessage": "Por favor introduce tu Nombre"
+          },
+          "last_name": {
+            "label": "APELLIDOS",
+            "placeholder": "p. ej. Hopper",
+            "errorMessage": "Por favor introduce tus Apellidos"
+          },
+          "email": {
+            "label": "DIRECCIÓN DE CORREO ELECTRÓNICO",
+            "placeholder": "p. ej. jim.hopper@mail.com",
+            "errorMessage": "Por favor introduce una dirección de Correo Electrónico válida"
+          },
+          "country": {
+            "label": "PAÍS",
+            "placeholder": "Selecciona",
+            "errorMessage": "Por favor selecciona un País",
+            "options": {
+              "u.s.": "EE. UU.",
+              "canada": "Canadá",
+              "mexico": "México"
+            }
+          },
+          "city": {
+            "label": "CIUDAD",
+            "placeholder": "p. ej. Hawkins",
+            "errorMessage": "Por favor introduce tu Ciudad"
+          },
+          "state": {
+            "label": "ESTADO/PROVINCIA/TERRITORIO",
+            "placeholder": "Selecciona",
+            "errorMessage": "Por favor selecciona un Estado",
+            "options": {
+              "state_of_mexico": "Estado de México",
+              "mexico_city": "Ciudad de México",
+              "british_columbia": "Columbia Británica",
+              "new_brunswick": "Nuevo Brunswick",
+              "newfoundland_and_labrador": "Terranova y Labrador",
+              "nova_scotia": "Nueva Escocia",
+              "prince_edward_island": "Isla del Príncipe Eduardo",
+              "northwest_territories": "Territorios del Noroeste"
+            }
+          },
+          "license_request_type": {
+            "label": "TIPO DE SOLICITUD DE LICENCIA",
+            "placeholder": "Selecciona",
+            "errorMessage": "Por favor, selecciona una Licencia",
+            "noteHtml": "Asegúrate de haber solicitado tu licencia de Stranger Things de Netflix antes de enviar el formulario de inscripción. Puedes solicitar la licencia\u00a0<a href=\"https://create.roblox.com/explore/licenses/6fdf2c6d-e7e9-40de-a94c-b40411675759\" target=\"_blank\" rel=\"noopener noreferrer\">aquí</a>.",
+            "options": {
+              "ugc": "UGC Item",
+              "time-limited": "Por tiempo limitado",
+              "perpetual": "Perpetua"
+            }
+          },
+          "creator_id": {
+            "label": "ID DEL CREADOR",
+            "placeholder": "p. ej. 123456789",
+            "errorMessage": "Por favor, introduce tu ID de Creador",
+            "validate": {
+              "message": "El ID de Creador debe tener 9 dígitos, solo números"
+            }
+          },
+          "experience_id_url": {
+            "label": "URL DEL JUEGO / URL NUEVO ITEM",
+            "placeholder": "https://",
+            "errorMessage": "Por favor, introduce una URL válida",
+            "validate": {
+              "message": "Por favor, introduce una URL válida que empiece por https://"
+            },
+            "dependsOn": {
+              "textWhen": {
+                "new_item": {
+                  "label": "URL DEL UGC ITEM",
+                  "errorMessage": "Por favor, introduce una URL válida"
+                },
+                "game_integration": {
+                  "label": "URL DEL JUEGO",
+                  "errorMessage": "Por favor, introduce una URL válida"
+                },
+                "full_game": {
+                  "label": "URL DEL JUEGO",
+                  "errorMessage": "Por favor, introduce una URL válida"
+                }
+              }
+            }
+          },
+          "p_i_confirm_i_am_a_legal_resident_of_eit": {
+            "label": "Confirmo que soy residente legal de uno de los 50 estados de EE. UU./D. C., Canadá o México; que tengo al menos 18 años de edad (o la mayoría de edad en mi jurisdicción de residencia, lo que sea mayor); y que he leído y acepto las Reglas Oficiales y los Términos de Uso Globales y la Política de Privacidad del Concurso.",
+            "labelHtml": "Confirmo que soy residente legal de uno de los 50 estados de EE. UU./D. C., Canadá o México; que tengo al menos 18 años de edad (o la mayoría de edad en mi jurisdicción de residencia, lo que sea mayor); y que he leído y acepto las <a href=\"/rules-es\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Reglas Oficiales</strong></a> y los <a href=\"/termsofuse-es\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Términos de Uso Globales y la Política de Privacidad del Concurso</strong></a>.",
+            "errorMessage": "Debes aceptar para continuar"
+          }
+        },
+        "submit": {
+          "label": "ENVIAR"
+        },
+        "shownErrors": {
+          "Sorry, you reached the entry limit for this category.": "Lo sentimos, has alcanzado el límite de participaciones para esta categoría."
+        },
+        "messages": {
+          "sending": "ENVIANDO…",
+          "error": "Gracias por tu paciencia; por favor, intenta participar de nuevo.",
+          "loading": "CARGANDO…",
+          "loadError": "No se pudo cargar el formulario.",
+          "retry": "Reintentar"
+        }
+      },
+      "legal": {
+        "summaryHtml": "<strong>NO ES NECESARIO REALIZAR NINGUNA COMPRA.</strong> Participa en el concurso entre las 12:01 a. m. (hora del Pacífico) del 6 de noviembre de 2026 y las 11:59 p. m. (hora del Pacífico) del 8 de enero de 2027. Abierto a residentes legales de los 50 estados de EE. UU. y el Distrito de Columbia, Canadá y México, que tengan al menos 18 años de edad (o la mayoría de edad establecida en su jurisdicción de residencia, la que sea mayor). Consulta las <a href=\"/rules-es\" target=\"_blank\" rel=\"noopener noreferrer\">Reglas Oficiales</a> para obtener todos los detalles sobre los requisitos de elegibilidad, cómo participar, los criterios de evaluación, las descripciones de los premios y las limitaciones. Nulo donde esté prohibido."
+      }
+    },
+    "fr": {
+      "languageMenu": {
+        "name": "Français",
+        "label": "Langue"
+      },
+      "seo": {
+        "title": "Stranger Things Day Developer Contest",
+        "description": "Build your own Stranger Things games and items for a chance to win Roblox Ad Credit and exclusive digital prizes!",
+        "imageAlt": "Netflix Stranger Things"
+      },
+      "header": {
+        "alt": "Netflix Stranger Things"
+      },
+      "hero": {
+        "eyebrow": "CONCOURS POUR CRÉATEURS",
+        "titleHtml": "Créez vos propres jeux et articles inspirés de l’univers de Stranger Things pour tenter de remporter des crédits publicitaires Roblox et des prix numériques exclusifs!",
+        "paragraphsHtml": ["Dites-nous qui vous êtes, ce que vous créez et où le trouver."]
+      },
+      "thankYou": {
+        "titleHtml": "MERCI DE VOTRE PARTICIPATION",
+        "paragraphsHtml": [
+          "Votre participation a bien été reçue. Nous examinerons toutes les candidatures après la clôture du concours le 8 janvier 2027; surveillez votre boîte de réception."
+        ]
+      },
+      "form": {
+        "sections": {
+          "category": {
+            "titleHtml": "<div class=\"st-head\"><h2 class=\"st-title\"><span class=\"st-title__num\">01</span> Catégorie de participation</h2><div class=\"st-category\"></div></div>"
+          },
+          "about-you": {
+            "titleHtml": "<div class=\"st-head\"><h2 class=\"st-title\"><span class=\"st-title__num\">02</span> Renseignements personnels</h2></div>"
+          },
+          "about-content": {
+            "titleHtml": "<div class=\"st-head\"><h2 class=\"st-title\"><span class=\"st-title__num\">03</span> À propos de votre création</h2></div>"
+          }
+        },
+        "fields": {
+          "entry_category": {
+            "label": "CATÉGORIE DE PARTICIPATION",
+            "placeholder": "Sélectionnez votre catégorie de participation",
+            "errorMessage": "Veuillez sélectionner une catégorie de participation",
+            "options": {
+              "new_item": "Objet UGC",
+              "game_integration": "Intégration dans un jeu",
+              "full_game": "Jeu nouveau"
+            }
+          },
+          "first_name": {
+            "label": "PRÉNOM",
+            "placeholder": "ex. Jim",
+            "errorMessage": "Veuillez saisir votre prénom"
+          },
+          "last_name": {
+            "label": "NOM DE FAMILLE",
+            "placeholder": "ex. Hopper",
+            "errorMessage": "Veuillez saisir votre nom de famille"
+          },
+          "email": {
+            "label": "ADRESSE COURRIEL",
+            "placeholder": "ex. jim.hopper@mail.com",
+            "errorMessage": "Veuillez saisir une adresse courriel valide"
+          },
+          "country": {
+            "label": "PAYS",
+            "placeholder": "Sélectionner",
+            "errorMessage": "Prière de sélectionner un pays",
+            "options": {
+              "u.s.": "États-Unis",
+              "canada": "Canada",
+              "mexico": "Mexique"
+            }
+          },
+          "city": {
+            "label": "VILLE",
+            "placeholder": "ex. Hawkins",
+            "errorMessage": "Veuillez indiquer votre ville"
+          },
+          "state": {
+            "label": "ÉTAT/PROVINCE/TERRITOIRE",
+            "placeholder": "Sélectionner",
+            "errorMessage": "Prière de sélectionner un État",
+            "options": {
+              "state_of_mexico": "État de Mexico",
+              "mexico_city": "Mexico (ville)",
+              "british_columbia": "Colombie-Britannique",
+              "new_brunswick": "Nouveau-Brunswick",
+              "newfoundland_and_labrador": "Terre-Neuve-et-Labrador",
+              "nova_scotia": "Nouvelle-Écosse",
+              "prince_edward_island": "Île-du-Prince-Édouard",
+              "quebec": "Québec",
+              "northwest_territories": "Territoires du Nord-Ouest"
+            }
+          },
+          "license_request_type": {
+            "label": "TYPE DE LICENCE DEMANDÉE",
+            "placeholder": "Sélectionner",
+            "errorMessage": "Veuillez sélectionner un type de licence",
+            "noteHtml": "Assurez-vous d’avoir demandé votre licence Stranger Things de Netflix avant de soumettre le formulaire de participation. Vous pouvez demander la licence\u00a0<a href=\"https://create.roblox.com/explore/licenses/6fdf2c6d-e7e9-40de-a94c-b40411675759\" target=\"_blank\" rel=\"noopener noreferrer\">ici</a>.",
+            "options": {
+              "ugc": "Objet UGC",
+              "time-limited": "À durée limitée",
+              "perpetual": "Perpétuelle"
+            }
+          },
+          "creator_id": {
+            "label": "IDENTIFIANT DE CRÉATEUR",
+            "placeholder": "ex. 123456789",
+            "errorMessage": "Veuillez saisir votre identifiant de créateur",
+            "validate": {
+              "message": "L’identifiant de créateur doit contenir 9 chiffres, chiffres seulement"
+            }
+          },
+          "experience_id_url": {
+            "label": "URL DE L’EXPÉRIENCE",
+            "placeholder": "https://",
+            "errorMessage": "Veuillez saisir une URL valide",
+            "validate": {
+              "message": "Veuillez saisir une URL valide commençant par https://"
+            },
+            "dependsOn": {
+              "textWhen": {
+                "new_item": {
+                  "label": "URL DE L’OBJET UGC",
+                  "errorMessage": "Veuillez saisir une URL valide pour l’objet UGC"
+                },
+                "game_integration": {
+                  "label": "URL DU JEU",
+                  "errorMessage": "Veuillez saisir une URL valide pour le jeu"
+                },
+                "full_game": {
+                  "label": "URL DU JEU",
+                  "errorMessage": "Veuillez saisir une URL valide pour le jeu"
+                }
+              }
+            }
+          },
+          "p_i_confirm_i_am_a_legal_resident_of_eit": {
+            "label": "Je certifie que je réside légalement dans l’un des 50 États des États-Unis ou dans le district de Columbia, au Canada ou au Mexique, que je suis âgé d’au moins 18 ans (ou que j’ai atteint l’âge de la majorité dans ma juridiction de résidence, si celui-ci est supérieur) et que j’ai lu et accepté le Règlement officiel et aux Conditions générales d’utilisation et à la Politique de confidentialité du concours.",
+            "labelHtml": "Je certifie que je réside légalement dans l’un des 50 États des États-Unis ou dans le district de Columbia, au Canada ou au Mexique, que je suis âgé d’au moins 18 ans (ou que j’ai atteint l’âge de la majorité dans ma juridiction de résidence, si celui-ci est supérieur) et que j’ai lu et accepté le <a href=\"/rules-fr\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Règlement officiel</strong></a> et aux <a href=\"/termsofuse-fr\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Conditions générales d’utilisation et à la Politique de confidentialité du concours</strong></a>.",
+            "errorMessage": "Vous devez accepter les conditions pour continuer"
+          }
+        },
+        "submit": {
+          "label": "SOUMETTRE MA PARTICIPATION"
+        },
+        "shownErrors": {
+          "Sorry, you reached the entry limit for this category.": "Désolé, vous avez atteint la limite de participations pour cette catégorie."
+        },
+        "messages": {
+          "sending": "ENVOI EN COURS…",
+          "error": "Merci de votre patience ; veuillez réessayer de participer.",
+          "loading": "CHARGEMENT…",
+          "loadError": "Le formulaire n’a pas pu être chargé.",
+          "retry": "Réessayer"
+        }
+      },
+      "legal": {
+        "summaryHtml": "<strong>AUCUN ACHAT REQUIS.</strong> Participez au Concours du 6 novembre 2026 à 0 h 01 PT au 8 janvier 2027 à 23 h 59 PT. Ouvert aux résidents légaux des 50 États des États-Unis et du district de Columbia, du Canada et du Mexique, âgés d’au moins 18 ans (ou ayant atteint l’âge de la majorité dans leur juridiction de résidence, si celui-ci est supérieur). Consultez le <a href=\"/rules-fr\" target=\"_blank\" rel=\"noopener noreferrer\">Règlement officiel</a> pour connaître toutes les conditions d’admissibilité, les modalités de participation, les critères d’évaluation, la description des prix et les restrictions applicables. Concours nul si la loi l’interdit."
+      }
+    }
+  }
+}

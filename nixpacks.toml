@@ -1,0 +1,18 @@
+# Nixpacks build for Probability's Coolify preview (static site: Coolify serves
+# dist/ with nginx). Netflix's own pipeline doesn't use this file.
+# Docs: https://nixpacks.com/docs/configuration/file
+
+[phases.setup]
+nixPkgs = ["nodejs_24"]
+
+[phases.install]
+cmds = [
+  "corepack enable",
+  "corepack prepare pnpm@10.33.0 --activate",
+  "pnpm install --frozen-lockfile",
+]
+cacheDirectories = ["/root/.local/share/pnpm/store"]
+
+[phases.build]
+# Test environment: noindex, robots Disallow, submissions to /submission/test/.
+cmds = ["pnpm run build:test"]

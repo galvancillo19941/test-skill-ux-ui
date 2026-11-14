@@ -1,0 +1,168 @@
+openapi: 3.1.0
+info:
+  title: Stranger Things Day Developer Contest — endpoints called by the site
+  version: 1.0.0
+  description: |
+    The site is static and has no API of its own. These are the third-party
+    (Probability) endpoints the browser calls, as the site uses them
+    (src/components/universal-form-v1/useEntrySubmission.ts). Owned and
+    operated by Probability; request/response shapes beyond what the site
+    sends and reads are not described here.
+
+    Site routes (static files): `/` (index.html), `/robots.txt`,
+    `/sitemap.xml`; any other path serves `error.html`.
+servers:
+  - url: https://api.helloprobability.io
+paths:
+  /service/get-form-fields/{program}:
+    post:
+      summary: Get the devForm token required by the submission service, and the campaign's dates
+      description: |
+        Called once when the page loads, and again before submitting if the
+        token is older than 9 minutes (useEntrySubmission.ts). The answer of the
+        first call also gives the campaign's opening and closing dates
+        (`dateValidations`, campaignDates.ts): the form only shows between them.
+        Carries no personal information.
+      parameters:
+        - $ref: "#/components/parameters/program"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [env, url, userAgent]
+              properties:
+                env: { type: string, enum: [test, prod] }
+                url: { type: string, format: uri, description: Page URL }
+                userAgent: { type: string }
+                utm_source: { type: string }
+                utm_medium: { type: string }
+                utm_campaign: { type: string }
+                utm_id: { type: string }
+                utm_term: { type: string }
+                utm_content: { type: string }
+      responses:
+        "200":
+          description: Token issued (valid for 10 minutes)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      devForm: { type: string }
+                      dateValidations:
+                        type: object
+                        properties:
+                          startDate:
+                            {
+                              type: string,
+                              format: date-time,
+                              description: Opening (ISO 8601 with time zone),
+                            }
+                          endDate:
+                            {
+                              type: string,
+                              format: date-time,
+                              description: Closing (ISO 8601 with time zone),
+                            }
+                          startDateMessage: { type: string, description: Shown before opening }
+                          endDateMessage: { type: string, description: Shown after closing }
+        "403":
+          description: Invalid origin (the page's domain is not on the campaign's list)
+  /submission/{env}/{program}:
+    post:
+      summary: Submit a contest entry
+      description: Sent once per entry when the entrant presses SUBMIT ENTRY and every field is valid. Contains personal information.
+      parameters:
+        - name: env
+          in: path
+          required: true
+          schema: { type: string, enum: [test, prod] }
+        - $ref: "#/components/parameters/program"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entry"
+      responses:
+        "200":
+          description: Accepted when `success` is true (or, without `success`, `statusCode` is 200)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success: { type: boolean }
+                  statusCode: { type: integer }
+        default:
+          description: Refused; `error.detail` is shown to the entrant when present
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success: { type: boolean, const: false }
+                  error:
+                    type: object
+                    properties:
+                      detail: { type: string }
+components:
+  parameters:
+    program:
+      name: program
+      in: path
+      required: true
+      description: Probability program id (6ac016a105927c4e9b5bc570)
+      schema: { type: string }
+  schemas:
+    Entry:
+      type: object
+      description: Flat body.
+      required:
+        - entry_category
+        - first_name
+        - last_name
+        - email
+        - country
+        - city
+        - state
+        - license_request_type
+        - creator_id
+        - experience_id_url
+        - p_i_confirm_i_am_a_legal_resident_of_eit
+      properties:
+        entry_category: { type: string, enum: [new_item, game_integration, full_game] }
+        first_name: { type: string }
+        last_name: { type: string }
+        email: { type: string, format: email }
+        country: { type: string, enum: [u.s., canada, mexico] }
+        city: { type: string }
+        state:
+          {
+            type: string,
+            description: 'State / province / territory slug of the chosen country, e.g. "indiana", "quebec", "jalisco"',
+          }
+        license_request_type: { type: string, enum: [ugc, time-limited, perpetual] }
+        creator_id: { type: string, pattern: "^[0-9]{9}$" }
+        experience_id_url: { type: string, format: uri, description: "https:// link on roblox.com" }
+        p_i_confirm_i_am_a_legal_resident_of_eit: { type: boolean, const: true }
+        devForm: { type: string, description: Token from get-form-fields }
+        url: { type: string, format: uri }
+        http_referrer:
+          {
+            type: string,
+            description: 'The site the visitor came from (document.referrer, usually only its origin, e.g. "https://l.facebook.com/"); always sent, "" on a direct visit or when it is the site itself',
+          }
+        userAgent: { type: string }
+        dev: { description: Universal Form diagnostics metadata }
+        utm_source: { type: string }
+        utm_medium: { type: string }
+        utm_campaign: { type: string }
+        utm_id: { type: string }
+        utm_term: { type: string }
+        utm_content: { type: string }

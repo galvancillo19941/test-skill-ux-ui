@@ -1,0 +1,33 @@
+# Dependencies and build output
+node_modules
+dist
+dist-ssr
+*.local
+
+# Secrets and local credentials — never commit them
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Databases (this site has none; keep it that way)
+*.sqlite
+*.sqlite-*
+*.db
+
+# Logs
+*.log
+
+# Editors / OS
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.sw?
+
+# AI agent worktrees
+.claude/worktrees/
+
+# Local AI working notes (instructions for agents, not part of the site)
+/APERTURA-Y-CIERRE.md
